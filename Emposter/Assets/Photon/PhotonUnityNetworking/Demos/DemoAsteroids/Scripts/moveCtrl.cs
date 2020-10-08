@@ -4,19 +4,6 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 
-//20161626 김창식 깃허브 테스트
-//20161626 김창식 깃허브 테스트
-//20161626 김창식 깃허브 테스트
-//20161626 김창식 깃허브 테스트
-//20161626 김창식 깃허브 테스트
-//20161626 김창식 깃허브 테스트
-//20161626 김창식 깃허브 테스트
-//20161626 김창식 깃허브 테스트
-//20161626 김창식 깃허브 테스트
-//20161626 김창식 깃허브 테스트
-//20161626 김창식 깃허브 테스트
-
-
 public class moveCtrl : MonoBehaviourPunCallbacks, IPunObservable
 {
 
