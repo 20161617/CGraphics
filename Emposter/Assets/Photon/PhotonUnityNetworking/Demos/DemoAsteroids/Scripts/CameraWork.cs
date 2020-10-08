@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using Photon.Pun;
 
 namespace Com.MyCompany.MyGame
 {
     /// <summary>
     /// Camera work. Follow a target
     /// </summary>
-    public class CameraWork : MonoBehaviour
+    public class CameraWork : MonoBehaviourPun
     {
         #region Private Fields
 
@@ -67,7 +67,10 @@ namespace Com.MyCompany.MyGame
             // Start following the target if wanted.
             if (followOnStart)
             {
-                OnStartFollowing();
+                 if(photonView.IsMine)//자기 자신일떄  카메라 중복 막기위해 사용 
+                    OnStartFollowing();
+
+               
             }
 
 
@@ -88,7 +91,8 @@ namespace Com.MyCompany.MyGame
             // only follow is explicitly declared
             if (isFollowing)
             {
-                Apply();
+               
+                ApplyTest();
             }
         }
 
@@ -121,9 +125,18 @@ namespace Com.MyCompany.MyGame
         /// <summary>
         /// Follow the target smoothly
         /// </summary>
+        void ApplyTest()
+        {
+            Vector3 target = transform.position;
+            target.z -= 10;
+            target.y += 3;
+            cameraTransform.position = new Vector3(target.x, target.y, target.z);
+            Debug.Log(target);
+        }
         void Apply()
         {
             Vector3 targetCenter = transform.position + centerOffset;
+         
             // Calculate the current & target rotation angles
             float originalTargetAngle = transform.eulerAngles.y;
             float currentAngle = cameraTransform.eulerAngles.y;

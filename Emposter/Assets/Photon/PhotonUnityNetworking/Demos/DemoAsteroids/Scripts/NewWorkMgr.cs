@@ -7,11 +7,15 @@ using UnityEngine.SceneManagement;
 
 public class NewWorkMgr : MonoBehaviourPunCallbacks
 {
-    public GameObject player;
-    
+    public GameObject model1;
+    public GameObject model2;
+    public GameObject model3;
+
+    private GameObject player;
+
     private void Awake()
     {
-    
+      
         PhotonNetwork.AutomaticallySyncScene = true;
 
     }
@@ -19,8 +23,31 @@ public class NewWorkMgr : MonoBehaviourPunCallbacks
     // Use this for initialization
     void Start()
     {
+        randomPrefab();
         PhotonNetwork.GameVersion = "1.0";
         PhotonNetwork.ConnectUsingSettings();
+    }
+    void randomPrefab()//임시 캐릭터 랜덤 
+    {
+        int playerModel = Random.Range(1, 3);
+        GameObject empty;
+        switch(playerModel)
+        {
+            case 1:
+                empty = model1;
+                break;
+            case 2:
+                empty = model2;
+                break;
+            case 3:
+                empty = model3;
+                break;
+            default:
+                Debug.Log("prefabError");
+                empty = null;
+                break;
+        }
+        player = empty;
     }
     //포톤 서버에 접속
     public override void OnConnectedToMaster()
