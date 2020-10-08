@@ -114,10 +114,10 @@ MonoBehaviour:
     y: 30
     width: 1904
     height: 931
-  m_MinSize: {x: 908, y: 271}
-  m_MaxSize: {x: 22003, y: 10021}
+  m_MinSize: {x: 911, y: 271}
+  m_MaxSize: {x: 22006, y: 10021}
   vertical: 0
-  controlID: 17
+  controlID: 119
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,8 +166,8 @@ MonoBehaviour:
     y: 0
     width: 528
     height: 931
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -218,8 +218,8 @@ MonoBehaviour:
     y: 0
     width: 324
     height: 931
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -277,8 +277,8 @@ MonoBehaviour:
     vZoomLockedByDefault: 0
     m_HBaseRangeMin: -370
     m_HBaseRangeMax: 370
-    m_VBaseRangeMin: -444.5
-    m_VBaseRangeMax: 444.5
+    m_VBaseRangeMin: -455
+    m_VBaseRangeMax: 455
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -295,11 +295,11 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 21
+      y: 0
       width: 740
-      height: 889
+      height: 910
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 370, y: 444.5}
+    m_Translation: {x: 370, y: 455}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -307,9 +307,9 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -370
-      y: -444.5
+      y: -455
       width: 740
-      height: 889
+      height: 910
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 740, y: 910}
@@ -404,11 +404,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.061143104, y: -0.14143914, z: 0.008787228, w: 0.9880304}
     speed: 2
-    m_Value: {x: 0.061142348, y: -0.14143738, z: 0.008787119, w: 0.9880181}
+    m_Value: {x: -0.061143108, y: 0.14143915, z: -0.008787228, w: -0.9880304}
   m_Size:
     m_Target: 27.81424
     speed: 2
-    m_Value: 26.616497
+    m_Value: 27.81424
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -554,21 +554,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 8489feffa089feff6c8bfeffa671ffff7874ffff9078ffffaea3ffffcea3ffff9aa5ffff68beffff88beffff54c0ffff6afbffff
+      m_ExpandedIDs: 36ddffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Sphere
-        m_OriginalName: Sphere
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 24830
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 7}
       m_SearchString: 
@@ -617,20 +617,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Scripts
+    - Assets/Photon/PhotonUnityNetworking/Code
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Scripts
+  - Assets/Photon/PhotonUnityNetworking/Code
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\USER-PC\Documents\GitHub\CGraphics\Emposter
+  m_LastProjectPath: "D:\\\uC870\uD604\uC131GF\\CGraphics\\Emposter"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b2360000
-    m_LastClickedID: 14002
-    m_ExpandedIDs: 00000000a8360000aa360000ac360000ae360000b0360000b23600005a4900005c4900005e4900006449000000ca9a3b
+    m_SelectedIDs: 544a0000
+    m_LastClickedID: 19028
+    m_ExpandedIDs: 00000000384a00003a4a00003c4a00003e4a0000404a0000424a0000444a0000464a0000484a00004a4a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -658,7 +658,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a8360000aa360000ac360000ae360000b0360000b2360000
+    m_ExpandedIDs: 00000000384a00003a4a00003c4a00003e4a0000404a0000424a0000444a0000464a0000484a00004a4a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -685,22 +685,22 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: ec390000843300002c38000000000000084d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: TT_demo_zombie
-      m_OriginalName: TT_demo_zombie
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 23206
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 8}
     m_CreateAssetUtility:
