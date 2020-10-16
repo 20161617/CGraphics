@@ -4,28 +4,71 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 
+
+
 public class moveCtrl : MonoBehaviourPunCallbacks, IPunObservable
 {
+    public enum PlayerState { idle, run };
+    public PlayerState playerState = PlayerState.idle;
 
-    public float speed = 10.0f;
+    private float h = 0.0f;
+    private float v = 0.0f;
+    public float moveSpeed = 10.0f;
+    public float rotSpeed = 100.0f;
+
+    private Animator animator;
     private Transform tr;
 
     void Start()
     {
         tr = GetComponent<Transform>();
-        
+        animator = GetComponent<Animator>();
+
     }
 
+    void AnimUpdate() //이동에 따른 플레이어 애니메이션 변경 
+    {
+        if (v >= 0.1f)
+        {
+            animator.SetBool("IsWalk", true);
+        }
+        else if (v <= -0.1f)
+        {
+            animator.SetBool("IsWalk", true);
+        }
+        else if (h >= 0.1f)
+        {
+            animator.SetBool("IsWalk", true);
+        }
+        else if (h <= -0.1f)
+        {
+            animator.SetBool("IsWalk", true);
+        }
+        else
+        {
+            Debug.Log("h :" + h + "  v :" + v);
+            playerState = PlayerState.idle;
+            animator.SetBool("IsWalk", false);
+            // _animation.CrossFade(anim.idle.name, 0.3f);
+        }
+    }
+    void MoveUpdate()
+    {
+         h = Input.GetAxis("Horizontal");
+         v = Input.GetAxis("Vertical");
+
+        //Vector3 moveDir = (Vector3.forward * v) + (Vector3.right * h);
+        //tr.Translate(moveDir * moveSpeed * Time.deltaTime, Space.Self);
+        //tr.Rotate(Vector3.up * Time.deltaTime * rotSpeed * Input.GetAxis("Mouse X"));
+
+    }
     void Update()
     {
         //controlled locally일 경우 이동(자기 자신의 캐릭터일 때)
         if (photonView.IsMine)
         {
-            float moveHorizontal = Input.GetAxis("Horizontal");
-            float moveVertical = Input.GetAxis("Vertical");
-
-            Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
-            tr.Translate(movement * Time.deltaTime * speed);
+            MoveUpdate();
+            AnimUpdate();
         }
         else
         {

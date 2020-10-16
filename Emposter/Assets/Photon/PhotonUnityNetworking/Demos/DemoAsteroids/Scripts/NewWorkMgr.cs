@@ -8,8 +8,8 @@ using UnityEngine.SceneManagement;
 public class NewWorkMgr : MonoBehaviourPunCallbacks
 {
     public GameObject model1;
-    public GameObject model2;
-    public GameObject model3;
+    private GameObject model2;
+    private GameObject model3;
 
     private GameObject player;
 
@@ -29,7 +29,8 @@ public class NewWorkMgr : MonoBehaviourPunCallbacks
     }
     void randomPrefab()//임시 캐릭터 랜덤 
     {
-        int playerModel = Random.Range(1, 3);
+        int playerModel = 1;
+        //int playerModel = Random.Range(1, 3);
         GameObject empty;
         switch(playerModel)
         {
@@ -76,7 +77,7 @@ public class NewWorkMgr : MonoBehaviourPunCallbacks
     }
     public void CreateCamera()
     {
-        GameObject mainCamera = GameObject.FindWithTag("MainCamera");
+        //GameObject mainCamera = GameObject.FindWithTag("MainCamera");
  
 
     }
